@@ -13,7 +13,7 @@ A Python / Pandas analysis and Power BI dashboard of 10 years of HR data from a 
 | 1 | 1,485 of 6,284 employees (23.6%) left in 2006–2015, but the yearly turnover rate is only 2.0–4.9%. The 23.6% is the cumulative share over ten years, not an annual rate. |
 | 2 | **Retirement is the biggest reason (59.6%)**, then resignation (25.9%) and layoff (14.5%). 85.5% of exits are voluntary. |
 | 3 | **2014 was an outlier year** (4.9% turnover, 253 exits). Layoffs start in 2014 (142, then 73 in 2015) and no hires appear after 2013, so year-end headcount fell 8.0% (5,214 to 4,799). |
-| 4 | **100 of the 215 layoffs came from three locations** (Fort Nelson,New Westminster, Grand Forks), where everyone still working in 2014 was let go. This looks like store closures. |
+| 4 | **100 of the 215 layoffs came from three locations** (Fort Nelson, New Westminster, Grand Forks), where everyone still working in 2014 was let go. This looks like store closures. |
 | 5 | **Customer Service has the real retention problem:** 179 resignations (46.5% of all resignations) plus 70 layoffs. |
 | 6 | Produce (33.3%) and Meats (30.1%) have the highest attrition, but it is mostly retirements. Together they account for 623 of the company’s 885 retirements (70%). |
 | 7 | **Early-career staff leave more:** 27.0% of ages 19–25 (199 of 736) vs 9.0% of ages 26–59 (371 of 4,119). The gap is mostly resignations (22.3% vs 5.3%). Ages are at the employee's last record, and no retirements fall in either group because all retirements happen at 60 or 65. The typical resigner is 29 years old with 4 years of service. |
