@@ -73,6 +73,31 @@ Interactive 3-page dashboard built from `Attrition_cleaned.csv` and `yearly_summ
 - No salary, performance or satisfaction data, so the analysis shows *who* and *when*, not *why* people resign.
 - Correlation is not causation.
 
+## SQL analysis
+
+I re-answered the key questions with SQL (SQLite) to check the Python results. All 11 queries are in `sql/attrition_queries.sql`, and every number matches the findings above.
+
+| Question | SQL used |
+|---|---|
+| How many left, and what share? | `COUNT`, `SUM`, percentages |
+| Why do people leave? | `GROUP BY`, `SUM() OVER ()` for share of total |
+| Exits per year vs the year before | CTE, `LAG()` |
+| Yearly turnover rate | two CTEs, `JOIN` across both tables |
+| Highest-attrition departments | `HAVING`, `RANK()` |
+| Where resignations come from | running total with `SUM() OVER (ORDER BY ...)` |
+| Cities behind the layoffs | `ROW_NUMBER()`, cumulative % |
+| Early-career vs other staff | `CASE WHEN`, conditional counts |
+| Gender and exit reason | conditional aggregation |
+| Typical resigner (mean and median) | `AVG`, median with window functions |
+
+To run them (needs `pandas`):
+
+```
+python sql/run_sql.py        # all queries
+python sql/run_sql.py 5      # only Q5
+```
+
+
 ## Files
 
 | File | Description |
@@ -83,6 +108,8 @@ Interactive 3-page dashboard built from `Attrition_cleaned.csv` and `yearly_summ
 | `yearly_summary.csv` | Hires, exits, headcount and turnover rate per year |
 | `images/` | Charts used in this README |
 | `powerbi/` | Power BI file (`Attrition_Analysis.pbix`) and dashboard screenshots |
+| `sql/` | 11 SQL queries (SQLite) and a script to run them |
+
 
 ## How to run
 
@@ -95,12 +122,12 @@ Keep `Attrition_dataset.csv` in the same folder as the notebook.
 
 ## Tools
 
-Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook, Power BI, DAX
+Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook, Power BI, DAX, SQL (SQLite)
 
 ## Next steps
 
-- Prediction model for resignation (logistic regression)
+- logistic regression
 
 ## Author
 
-**Varshini Ganesan**: [GitHub](https://github.com/vrshy) | [LinkedIn](https://www.linkedin.com/in/varshiganesan)
+**VARSHINI GANESAN**: [GitHub](https://github.com/vrshy) | [LinkedIn](https://www.linkedin.com/in/varshiganesan)
