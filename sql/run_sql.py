@@ -17,7 +17,7 @@ import sqlite3
 import sys
 from pathlib import Path
 
-import pandas  as pd
+import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
